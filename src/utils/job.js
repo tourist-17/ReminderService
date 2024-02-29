@@ -17,21 +17,20 @@ const setupJobs = () => {
       sender.sendMail(
         {
           // from: "RemiderService@airline.com",
-          to: email.recepientEmail,
+          to: "yadsak00@gmail.com",
           subject: email.subject,
           content: email.content,
         },
         async (err, data) => {
           if (err) console.log(err);
           else {
-            console.log(data);
+            // console.log(data);
             await emailService.updateTicket(email.id, { status: "SUCCESS" });
           }
         }
       );
     });
-    console.log(response);
+    // console.log(response);
   });
 };
-
 module.exports = setupJobs;

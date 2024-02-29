@@ -21,7 +21,7 @@ class TicketRepository {
     try {
       const ticket = await Notification.findAll({
         where: {
-          status: filter.status,
+        //   status: filter.status,
           NotificationTime: {
             [Op.lte]: new Date(),
           },
